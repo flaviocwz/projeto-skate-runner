@@ -29,8 +29,8 @@ h1 {
 .skatista {
     position: absolute;
     width: 50px;
+    margin-left: 40px;
     bottom: 0;
-    transition: transform 0.5s; 
 }
 
 .jump {
