@@ -1,13 +1,17 @@
 const skatista = document.querySelector('.skatista');
 
+
 const jump = () => {
-    skatista.classList.add('jump');
+   
+    
+        skatista.classList.add('jump');
 
-    setTimeout(() => {
-       
-    skatista.classList.remove('jump');
+        
+        setTimeout(() => {
+            skatista.classList.remove('jump');
+        }, 500);
+    }
 
-    },500);
-}
 
-document.addEventListener('keydown', jump)
+
+document.addEventListener('keydown', jump);
