@@ -1,10 +1,13 @@
 const skatista = document.querySelector('.skatista');
 const lata = document.querySelector('.lata');
 
-const jump = () => {  // Função responsável por fazer o personagem pular 
+const jump = () => {  // Função responsável por fazer o personagem pular
+    if (skatista.classList.contains('jump')) return
+    skatista.src = "images/jump.png" 
     skatista.classList.add('jump');
     setTimeout(() => {
         skatista.classList.remove('jump');
+        skatista.src = "images/regular.png"
     }, 600); // Ajustei o tempo para 600ms, para combinar com a animação CSS
 }
 
@@ -25,4 +28,8 @@ const over = setInterval(() => { // Função para parar a animação quando o sk
 
 }, 10);
 
-document.addEventListener('keydown', jump);
+document.addEventListener('keydown', (event) => {
+    if (event.key === "ArrowUp") {
+        jump();
+    }
+});

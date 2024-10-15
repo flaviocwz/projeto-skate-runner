@@ -36,7 +36,7 @@ h1 {
     position: absolute;
     bottom: 0;
     width: 60px;
-    animation: lata-animation 4s linear infinite;
+    animation: lata-animation 2s linear infinite;
 }
 
 /* Skatista */
