@@ -1,7 +1,7 @@
 const skatista = document.querySelector('.skatista');
 const lata = document.querySelector('.lata');
 
-const jump = () => {  // Função responsável por fazer o personagem pular
+function jump() {  // Função responsável por fazer o personagem pular
     if (skatista.classList.contains('jump')) return;
     skatista.src = "images/jump.png"; 
     skatista.classList.add('jump');
