@@ -11,6 +11,16 @@ function jump() {  // Função responsável por fazer o personagem pular
     }, 600); // Ajuste de tempo para 600ms, para combinar com a animação CSS
 };
 
+function jumph() {
+    if (skatista.classList.contains('jumph')) return;
+    skatista.src = "images/jump.png";
+    skatista.classList.add('jumph');
+    setTimeout(() => {
+        skatista.classList.remove('jumph')
+        skatista.src = "images/regular.png";
+    }, 600);
+}
+
 const over = setInterval(() => { // Função para parar a animação quando o skatista bater na lata
     const lataPosition = lata.offsetLeft;
     const skatistaPosition = +window.getComputedStyle(skatista).bottom.replace('px', '');
@@ -31,4 +41,10 @@ document.addEventListener('keydown', (event) => {
     if (event.key === "ArrowUp") {
         jump();
     }
-});
+})
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === "ArrowRight") {
+        jumph();
+    }
+})
